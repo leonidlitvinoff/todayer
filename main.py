@@ -20,7 +20,7 @@ class Widget(QWidget, Design):
     def update(self):
         self.listWidget.clear()
         for i in list(sorted(self.events)):
-            self.listWidget.addItem(QListWidgetItem(i[-1]))
+            self.listWidget.addItem(QListWidgetItem(f'{i[-1]}, {i[0]}, {i[1].toString()}'))
 
 
 app = QApplication(sys.argv)
